@@ -1,0 +1,20 @@
+{
+  "name": "@diwi/utils",
+  "version": "0.0.0",
+  "private": true,
+  "module": "./src/index.ts",
+  "main": "./src/index.ts",
+  "type": "module",
+  "scripts": {
+    "lint": "biome lint ./src",
+    "lint:write": "biome lint --write ./src",
+    "check": "biome check ./src",
+    "check:write": "biome check --write ./src",
+    "check:apply-safe": "biome check --apply ./src",
+    "check:apply-unsafe": "biome check --unsafe --write ./src",
+    "format": "biome format ./src",
+    "format:write": "biome format --write ./src",
+    "typecheck": "tsc -p ./tsconfig.json",
+    "health-check": "bun run lint && bun run check && bun run format && bun run typecheck"
+  }
+}

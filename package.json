@@ -1,12 +1,27 @@
 {
   "name": "vue-diwi",
-  "type": "module",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "type": "module",
+  "workspaces": ["apps/*", "libs/*"],
+  "packageManager": "bun@1.2.11",
+  "scripts": {
+    "turbo": "turbo",
+    "dc": "docker compose -p diwi -f",
+    "dc:dependencies": "bun run dc .docker/dev/docker-compose-dependencies.yml",
+    "dc:surreal": "docker exec -it diwi-database-1 /surreal",
+    "lint": "biome lint ./apps ./libs",
+    "lint:write": "biome lint --write ./apps ./libs",
+    "check": "biome check ./apps ./libs",
+    "check:write": "biome check --write ./apps ./libs",
+    "check:apply-safe": "biome check --apply ./apps ./libs",
+    "check:apply-unsafe": "biome check --unsafe --write ./apps ./libs",
+    "format": "biome format ./apps ./libs",
+    "format:write": "biome format --write ./apps ./libs",
+    "health-check": "bun run lint && bun run check && bun run format"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@biomejs/biome": "1.9.4",
+    "@types/bun": "latest",
+    "turbo": "^2.5.2"
   }
 }

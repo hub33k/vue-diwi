@@ -1,0 +1,115 @@
+{
+  // Editor
+  // ================================================================
+
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.minimap.autohide": true,
+  "editor.inlayHints.enabled": "on",
+  "editor.fontSize": 18,
+
+  // https://biomejs.dev/reference/vscode/
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "explicit"
+  },
+
+  // Explorer
+  // ================================================================
+
+  // "explorer.fileNesting.enabled": true,
+  // "explorer.fileNesting.patterns": {
+  //   "tsconfig.json": "tsconfig.*.json, env.d.ts",
+  //   "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
+  //   "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .oxlint*, oxlint*, .prettier*, prettier*, .editorconfig"
+  // },
+
+  // Workbench
+  // ================================================================
+
+  // https://www.linkedin.com/feed/update/urn:li:activity:7176578334808502273/
+  "workbench.editor.customLabels.enabled": true,
+  "workbench.editor.customLabels.patterns": {
+    "**/__init__.py": "${dirname}.init.py",
+
+    // index.ts
+    "**/index.ts": "${dirname}.index.ts"
+
+    // Svelte routes
+    // "**/routes/**/+page.svelte": "${dirname(1)}/${dirname}",
+    // "**/routes/**/+page.server.ts": "/${dirname} [server]",
+
+    // Next.js app routes
+    // "**/app/**/route.ts": "${dirname}.route.${extname}",
+    // "**/app/**/page.tsx": "${dirname}.${extname}",
+    // "**/app/**/layout.tsx": "${dirname}/layout.${extname}"
+  },
+
+  // Misc
+  // ================================================================
+
+  "terminal.integrated.fontSize": 18,
+
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true,
+    "hub33k-notes": true,
+    ".next": true
+  },
+
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+
+  // Languages
+  // ================================================================
+
+  // JavaScript/TypeScript
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // Vue
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+
+  // JSON
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  // Python
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+
+  // Tailwind
+  // https://ui.nuxt.com/getting-started/installation/nuxt#import-tailwind-css-and-nuxt-ui-in-your-css
+  "tailwindCSS.classAttributes": ["class", "ui"],
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+
+  // Extensions
+  // ================================================================
+
+  "prettier.configPath": ".prettierrc.cjs",
+
+  "codeium.enableCodeLens": false,
+  "codeium.enableConfig": {}
+}

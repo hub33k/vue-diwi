@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    // General
+    "editorconfig.editorconfig",
+
+    // JavaScript/TypeScript
+    "ms-vscode.vscode-typescript-next",
+    "yoavbls.pretty-ts-errors",
+    "usernamehw.errorlens",
+    "biomejs.biome",
+
+    // Vue
+    "vue.volar",
+
+    // Misc
+    "bradlc.vscode-tailwindcss"
+  ]
+}

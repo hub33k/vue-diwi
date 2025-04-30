@@ -1,0 +1,14 @@
+# https://medium.com/@abenezer.ayalneh.42/install-and-run-surrealdb-via-docker-compose-4882742663f5
+# https://surrealdb.com/docs/surrealml
+
+services:
+  database:
+    # TODO (hub33k): set specific version
+    image: surrealdb/surrealdb:latest
+    command: start
+    environment:
+      - SURREAL_USER=root
+      - SURREAL_PASS=root
+      - SURREAL_LOG=trace
+    ports:
+      - 8000:8000
