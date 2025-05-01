@@ -3,6 +3,7 @@
 
 import { z } from 'zod';
 
+export * from './auth.schema';
 export * from './utils';
 export * from './users.schema';
 export * from './validators';
