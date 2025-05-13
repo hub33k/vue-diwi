@@ -1,0 +1,15 @@
+meta {
+  name: logout
+  type: http
+  seq: 2
+}
+
+post {
+  url: 192.168.0.11:4000/api/v1/auth/logout
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QwQHRlc3QuY29tIiwic3ViIjoib3pxbTBkczZzbmZ3MTc3ZDVyeWkiLCJpYXQiOjE3NDcxNTQwMzksImV4cCI6MTc0NzE1NDkzOX0.qstRC77YENYBUgwf3MlzfTp7fHtN_2OfxiuOWruCJlo
+}
